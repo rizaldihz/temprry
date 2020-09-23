@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" dir="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Prakerin Petrokimia Gresik</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="assets/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="assets/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../dist-assets/css/plugins/datatables.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body class="text-left">
+    <div class="app-admin-wrap layout-sidebar-large">
+        <div class="main-header">
+            <div class="logo">
+                <img src="Prakerin%20Petrokimia%20Gresik_files/logo-PG-agro-trans-small.png" style="width: 100%!important" alt="">
+            </div>
+
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            
+
+            <div style="margin: auto"></div>
+
+            <div class="header-part-right">
+                <!-- Full screen toggle -->
+                <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=""></i>
+                
+                
+
+                <!-- User avatar dropdown -->
+                <div class="dropdown">
+                    <div class="user col align-self-end">
+                        <img src="Prakerin%20Petrokimia%20Gresik_files/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-header">
+                                <i class="i-Lock-User mr-1"></i>
+                                <span id="LoginName1">FajarMaulana</span>
+                            </div>
+                            <a class="dropdown-item" href="http://prakerin.petrokimia-gresik.com/App/Profile.aspx">Profile / Ganti Password</a>
+                            <a class="dropdown-item">Billing history</a>
+
+                            <a id="LoginStatus1" class="dropdown-item" href="javascript:__doPostBack('ctl00$LoginStatus1$ctl00','')">Logout</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="side-content-wrap">
+            <div class="sidebar-left open rtl-ps-none ps" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <ul class="navigation-left">
+                    <li class="nav-item" data-item="dashboard">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Bar-Chart"></i>
+                            <span class="nav-text">Beranda</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    
+                    <li class="nav-item" data-item="menu-pemohon">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Folder-Archive"></i>
+                            <span class="nav-text">Pengajuan Proposal</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+            <div class="sidebar-left-secondary rtl-ps-none ps" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <!-- Submenu Dashboards -->
+                <ul class="childNav" data-parent="dashboard" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App">
+                            <i class="nav-icon i-Clock-3"></i>
+                            <span class="item-name">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+                 <ul class="childNav" data-parent="menu-kabag" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=UKER_ASSIGN">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Permintaan Persetujuan Data Proposal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal disetujui oleh Kepala Bagian</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_KABAG">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal yang telah ditolak oleh Kepala Bagian</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Semua Proposal</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-manajer" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Permintaan Persetujuan Data Proposal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_MANAGER">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal disetujui oleh Manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_MANAGER">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal yang telah ditolak</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Semua Proposal</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-uker" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=penempatan">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Data Proposal yang ditujukan ke Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVED_UKER">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal lengkap dengan pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=confirmed">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal telah dikonfirmasi</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-student" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/StudentPage/Absensi">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Absensi Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/StudentPage/Assignment">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Penugasan</span>
+                        </a>
+                    </li>
+                </ul>
+                
+
+                <ul class="childNav" data-parent="menu-pemohon" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Kelompok.aspx">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Data Instansi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Members.aspx">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Personil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Pengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Kelengkapan Dokumen dan Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Resume.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Resume Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Reschedule.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Reschedule</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-staff" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=kirim">
+                            <i class="nav-icon i-Mail-Inbox"></i>
+                            <span class="item-name">Belum Diverifikasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=verify">
+                            <i class="nav-icon i-Mail-Love"></i>
+                            <span class="item-name">Telah diapprove</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=reject">
+                            <i class="nav-icon i-Mail-Block"></i>
+                            <span class="item-name">Telah ditolak</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Mail-Forward"></i>
+                            <span class="item-name">Telah diapprove kabag</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_KABAG">
+                            <i class="nav-icon i-Mail-Remove-x"></i>
+                            <span class="item-name">Telah ditolak kabag</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_MANAGER">
+                            <i class="nav-icon i-Mail-Send"></i>
+                            <span class="item-name">Telah diapprove manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_MANAGER">
+                            <i class="nav-icon i-Mail-Remove-x"></i>
+                            <span class="item-name">Telah ditolak manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVED_UKER">
+                            <i class="nav-icon i-Mail-Search"></i>
+                            <span class="item-name">Telah diapprove UKER</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_UKER">
+                            <i class="nav-icon i-Mail-Lock "></i>
+                            <span class="item-name">Telah ditolak oleh Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=EMAIL_SEND">
+                            <i class="nav-icon i-Mail-Reply-All"></i>
+                            <span class="item-name">Email terkirim</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=CONFIRMED">
+                            <i class="nav-icon i-Mail-Favorite"></i>
+                            <span class="item-name">Telah Konfirmasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Mailbox-Full"></i>
+                            <span class="item-name">Semua</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="childNav" data-parent="menu-admin" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageNews">
+                            <i class="nav-icon i-Data-Center"></i>
+                            <span class="item-name">Manage Pengumuman</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/Tools_Report">
+                            <i class="nav-icon i-Data-Center"></i>
+                            <span class="item-name">Report Data Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ReportPembimbing">
+                            <i class="nav-icon i-Assistant"></i>
+                            <span class="item-name">Report Pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Honor">
+                            <i class="nav-icon i-Money-2"></i>
+                            <span class="item-name">Report Honor Pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/HonorSiswa">
+                            <i class="nav-icon i-Money-Bag"></i>
+                            <span class="item-name">Report Honor Siswa PSG</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ReportPengajuanStatus">
+                            <i class="nav-icon i-Money-Bag"></i>
+                            <span class="item-name">Report Pengajuan Per Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/Kuota">
+                            <i class="nav-icon i-Clock"></i>
+                            <span class="item-name">Report Kuota Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ManageBanner">
+                            <i class="nav-icon i-Settings-Window"></i>
+                            <span class="item-name">Setting Banner</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ManageLoginBackground">
+                            <i class="nav-icon i-Settings-Window"></i>
+                            <span class="item-name">Setting Background Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageUser">
+                            <i class="nav-icon i-Cool-Guy"></i>
+                            <span class="item-name">Kelola User Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ResetPassword">
+                            <i class="nav-icon i-Pie-Chart-3"></i>
+                            <span class="item-name">Tools Gabungan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageTanggalSosialisasi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Tanggal Sosialisasi</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Master Institusi</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-aktivitas-admin" style="display: none;">
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Absensi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Absensi</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Nilai">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Nilai Akhir</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Assigment">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Tugas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ListAPD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">List Peminjaman APD</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/APD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Peminjaman APD</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/PengembalianAPD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Pengembalian APD</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Perpanjangan">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Permintaan Perpanjangan Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Reschedule">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Permintaan Reschedule Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ListLaporan">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">List Laporan &amp; File</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="apps" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/invoice.html">
+                            <i class="nav-icon i-Add-File"></i>
+                            <span class="item-name">Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/inbox.html">
+                            <i class="nav-icon i-Email"></i>
+                            <span class="item-name">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/chat.html">
+                            <i class="nav-icon i-Speach-Bubble-3"></i>
+                            <span class="item-name">Chat</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="extrakits" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/image.cropper.html">
+                            <i class="nav-icon i-Crop-2"></i>
+                            <span class="item-name">Image Cropper</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/loaders.html">
+                            <i class="nav-icon i-Loading-3"></i>
+                            <span class="item-name">Loaders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/ladda.button.html">
+                            <i class="nav-icon i-Loading-2"></i>
+                            <span class="item-name">Ladda Buttons</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/toastr.html">
+                            <i class="nav-icon i-Bell"></i>
+                            <span class="item-name">Toastr</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/sweet.alerts.html">
+                            <i class="nav-icon i-Approved-Window"></i>
+                            <span class="item-name">Sweet Alerts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/tour.html">
+                            <i class="nav-icon i-Plane"></i>
+                            <span class="item-name">User Tour</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/upload.html">
+                            <i class="nav-icon i-Data-Upload"></i>
+                            <span class="item-name">Upload</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="uikits" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/alerts.html">
+                            <i class="nav-icon i-Bell1"></i>
+                            <span class="item-name">Alerts</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="childNav" data-parent="sessions" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/signin.html">
+                            <i class="nav-icon i-Checked-User"></i>
+                            <span class="item-name">Sign in</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/signup.html">
+                            <i class="nav-icon i-Add-User"></i>
+                            <span class="item-name">Sign up</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/forgot.html">
+                            <i class="nav-icon i-Find-User"></i>
+                            <span class="item-name">Forgot</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="others" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/not.found.html">
+                            <i class="nav-icon i-Error-404-Window"></i>
+                            <span class="item-name">Not Found</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/user.profile.html">
+                            <i class="nav-icon i-Male"></i>
+                            <span class="item-name">User Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/blank.html" class="open">
+                            <i class="nav-icon i-File-Horizontal"></i>
+                            <span class="item-name">Blank Page</span>
+                        </a>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+            <div class="sidebar-overlay"></div>
+        </div>
+        <!-- =============== Left side End ================-->
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
+            <!-- ============ Body content start ============= -->
+            <div class="main-content">
+                <div class="breadcrumb">
+                    <h1>Kelompok</h1>
+                    <ul>
+                        <li>EPrakerin</li>
+                    </ul>
+                </div>
+                <div class="separator-breadcrumb border-top"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-title mb-3">Lengkapi Data Kelompok Anda</div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">E-mail </label>
+                                        <span id="MainContent_lblemail" class="form-control form-control-rounded">a@gmail.com</span>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">Tipe Pemohon </label>
+                                        <span id="MainContent_lbltipepemohon" class="form-control form-control-rounded">Mahasiswa</span>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">Jenis Pengajuan</label>
+                                        <span id="MainContent_lbltujuan" class="form-control form-control-rounded">PMMB</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_ddlinstitusi" id="MainContent_s_institusi">Universitas</label>
+                                        <span id="MainContent_lblinstitusi" class="form-control form-control-rounded">Institut Teknologi Sepuluh Nopember</span>
+                                        
+                                        
+                                    </div>
+                                    <div id="MainContent_divfakultas" class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Fakultas </label>
+                                        <span id="MainContent_lblfakultas" class="form-control form-control-rounded">Fakultas Teknologi Elektro dan Informatika</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Jurusan </label>
+                                        <select class="form-control form-control-rounded" id="jurusan" name="state">
+                                            <option value="AL">Teknik Informatika</option>
+                                            <option value="AL">Sistem Informasi</option>
+                                            <option value="AL">Teknik Industri</option>
+                                            <option value="AL">Teknik Kimia</option>
+                                            <option value="AL">Manajemen Bisnis</option>
+                                          </select>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_txtkota" id="MainContent_s_alamat">Alamat Universitas</label><span id="MainContent_lblkota" class="form-control form-control-rounded">Jl. Teknik Kimia, Keputih, Kec. Sukolilo, Kota SBY, Jawa Timur 60111</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_txtemailinstitusi" id="MainContent_s_emailinstitusi">Email Jurusan</label>
+                                        <span id="MainContent_lblemailinstitusi" class="form-control form-control-rounded">tinformatika@its.ac.id</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_txtpembimbing" id="MainContent_s_dosenpembimbing">Nama Dosen Pembimbing</label>
+                                        <span id="MainContent_lblpembimbing" class="form-control form-control-rounded">Dr. a, S.Kom., M.Sc.</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_txttelpjurusan" id="MainContent_s_telpjurusan">No Telp Jurusan</label>
+                                        <span id="MainContent_lbltelpjurusan" class="form-control form-control-rounded">+251</span>
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="MainContent_txthppembimbing" id="MainContent_s_nohppembimbing">No Telp Pembimbing</label>
+                                        <span id="MainContent_lblhppembimbing" class="form-control form-control-rounded">+655</span>
+                                        
+            
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Status Kelengkapan </label><br>
+                                        <span id="MainContent_lblkelengkapan" class="form-control-rounded badge badge-pill badge-success p-2 m-1">Lengkap</span>
+                                        <a id="MainContent_hlMember" class="btn btn-primary btn-sm" href="Members.aspx">Lanjutkan ke form anggota</a>
+                                    </div>
+                                    <div class="col-md-12 form-group mb-3">
+                                        <input type="submit" name="ctl00$MainContent$BtnEdit" value="Edit" id="MainContent_BtnEdit" class="btn btn-primary ">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- content goes here -->
+            </div>
+        </div>
+    </div>
+    <script src="assets/dist-assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/dist-assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/dist-assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/dist-assets/js/scripts/script.min.js"></script>
+    <script src="assets/dist-assets/js/scripts/sidebar.large.script.min.js"></script>
+    <script src="Prakerin%20Petrokimia%20Gresik_files/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#jurusan').select2();
+        });
+    </script>
+    
+</body>
+
+</html>

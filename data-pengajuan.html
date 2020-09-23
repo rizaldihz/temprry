@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" dir="">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Prakerin Petrokimia Gresik</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="assets/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="assets/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../dist-assets/css/plugins/datatables.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Prakerin%20Petrokimia%20Gresik_files/classic_002.css">
+    <link rel="stylesheet" href="Prakerin%20Petrokimia%20Gresik_files/classic.css">
+</head>
+
+<body class="text-left">
+    <div class="app-admin-wrap layout-sidebar-large">
+        <div class="main-header">
+            <div class="logo">
+                <img src="Prakerin%20Petrokimia%20Gresik_files/logo-PG-agro-trans-small.png" style="width: 100%!important" alt="">
+            </div>
+
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            
+
+            <div style="margin: auto"></div>
+
+            <div class="header-part-right">
+                <!-- Full screen toggle -->
+                <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=""></i>
+                
+                
+
+                <!-- User avatar dropdown -->
+                <div class="dropdown">
+                    <div class="user col align-self-end">
+                        <img src="Prakerin%20Petrokimia%20Gresik_files/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-header">
+                                <i class="i-Lock-User mr-1"></i>
+                                <span id="LoginName1">FajarMaulana</span>
+                            </div>
+                            <a class="dropdown-item" href="http://prakerin.petrokimia-gresik.com/App/Profile.aspx">Profile / Ganti Password</a>
+                            <a class="dropdown-item">Billing history</a>
+
+                            <a id="LoginStatus1" class="dropdown-item" href="javascript:__doPostBack('ctl00$LoginStatus1$ctl00','')">Logout</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="side-content-wrap">
+            <div class="sidebar-left open rtl-ps-none ps" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <ul class="navigation-left">
+                    <li class="nav-item" data-item="dashboard">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Bar-Chart"></i>
+                            <span class="nav-text">Beranda</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    
+                    <li class="nav-item" data-item="menu-pemohon">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Folder-Archive"></i>
+                            <span class="nav-text">Pengajuan Proposal</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+
+            <div class="sidebar-left-secondary rtl-ps-none ps" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <!-- Submenu Dashboards -->
+                <ul class="childNav" data-parent="dashboard" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App">
+                            <i class="nav-icon i-Clock-3"></i>
+                            <span class="item-name">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+                 <ul class="childNav" data-parent="menu-kabag" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=UKER_ASSIGN">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Permintaan Persetujuan Data Proposal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal disetujui oleh Kepala Bagian</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_KABAG">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal yang telah ditolak oleh Kepala Bagian</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Semua Proposal</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-manajer" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Permintaan Persetujuan Data Proposal</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_MANAGER">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal disetujui oleh Manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_MANAGER">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal yang telah ditolak</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Semua Proposal</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-uker" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=penempatan">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Data Proposal yang ditujukan ke Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVED_UKER">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Proposal lengkap dengan pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=confirmed">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Proposal telah dikonfirmasi</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-student" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/StudentPage/Absensi">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Absensi Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/StudentPage/Assignment">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Penugasan</span>
+                        </a>
+                    </li>
+                </ul>
+                
+
+                <ul class="childNav" data-parent="menu-pemohon" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Kelompok.aspx">
+                            <i class="nav-icon i-Building"></i>
+                            <span class="item-name">Data Instansi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Members.aspx">
+                            <i class="nav-icon i-Student-MaleFemale"></i>
+                            <span class="item-name">Data Personil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Pengajuan.aspx">
+                            <i class="nav-icon i-Folder-With-Document"></i>
+                            <span class="item-name">Data Kelengkapan Dokumen dan Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Resume.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Resume Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/Reschedule.aspx">
+                            <i class="nav-icon i-Letter-Open"></i>
+                            <span class="item-name">Reschedule</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-staff" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=kirim">
+                            <i class="nav-icon i-Mail-Inbox"></i>
+                            <span class="item-name">Belum Diverifikasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=verify">
+                            <i class="nav-icon i-Mail-Love"></i>
+                            <span class="item-name">Telah diapprove</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=reject">
+                            <i class="nav-icon i-Mail-Block"></i>
+                            <span class="item-name">Telah ditolak</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_KABAG">
+                            <i class="nav-icon i-Mail-Forward"></i>
+                            <span class="item-name">Telah diapprove kabag</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_KABAG">
+                            <i class="nav-icon i-Mail-Remove-x"></i>
+                            <span class="item-name">Telah ditolak kabag</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVE_MANAGER">
+                            <i class="nav-icon i-Mail-Send"></i>
+                            <span class="item-name">Telah diapprove manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_MANAGER">
+                            <i class="nav-icon i-Mail-Remove-x"></i>
+                            <span class="item-name">Telah ditolak manager</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=APPROVED_UKER">
+                            <i class="nav-icon i-Mail-Search"></i>
+                            <span class="item-name">Telah diapprove UKER</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=REJECT_UKER">
+                            <i class="nav-icon i-Mail-Lock "></i>
+                            <span class="item-name">Telah ditolak oleh Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=EMAIL_SEND">
+                            <i class="nav-icon i-Mail-Reply-All"></i>
+                            <span class="item-name">Email terkirim</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx?mode=CONFIRMED">
+                            <i class="nav-icon i-Mail-Favorite"></i>
+                            <span class="item-name">Telah Konfirmasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/DataPengajuan.aspx">
+                            <i class="nav-icon i-Mailbox-Full"></i>
+                            <span class="item-name">Semua</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="childNav" data-parent="menu-admin" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageNews">
+                            <i class="nav-icon i-Data-Center"></i>
+                            <span class="item-name">Manage Pengumuman</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/Tools_Report">
+                            <i class="nav-icon i-Data-Center"></i>
+                            <span class="item-name">Report Data Pengajuan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ReportPembimbing">
+                            <i class="nav-icon i-Assistant"></i>
+                            <span class="item-name">Report Pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Honor">
+                            <i class="nav-icon i-Money-2"></i>
+                            <span class="item-name">Report Honor Pembimbing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/HonorSiswa">
+                            <i class="nav-icon i-Money-Bag"></i>
+                            <span class="item-name">Report Honor Siswa PSG</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ReportPengajuanStatus">
+                            <i class="nav-icon i-Money-Bag"></i>
+                            <span class="item-name">Report Pengajuan Per Unit Kerja</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/Kuota">
+                            <i class="nav-icon i-Clock"></i>
+                            <span class="item-name">Report Kuota Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ManageBanner">
+                            <i class="nav-icon i-Settings-Window"></i>
+                            <span class="item-name">Setting Banner</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/App/ManageLoginBackground">
+                            <i class="nav-icon i-Settings-Window"></i>
+                            <span class="item-name">Setting Background Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageUser">
+                            <i class="nav-icon i-Cool-Guy"></i>
+                            <span class="item-name">Kelola User Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ResetPassword">
+                            <i class="nav-icon i-Pie-Chart-3"></i>
+                            <span class="item-name">Tools Gabungan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ManageTanggalSosialisasi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Tanggal Sosialisasi</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/MInstitusi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Master Institusi</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="menu-aktivitas-admin" style="display: none;">
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Absensi">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Absensi</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Nilai">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Nilai Akhir</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Assigment">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Data Tugas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ListAPD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">List Peminjaman APD</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/APD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Peminjaman APD</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/PengembalianAPD">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Pengembalian APD</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Perpanjangan">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Permintaan Perpanjangan Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/Reschedule">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">Permintaan Reschedule Prakerin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Admin/ListLaporan">
+                            <i class="nav-icon i-Calendar-4"></i>
+                            <span class="item-name">List Laporan &amp; File</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="apps" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/invoice.html">
+                            <i class="nav-icon i-Add-File"></i>
+                            <span class="item-name">Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/inbox.html">
+                            <i class="nav-icon i-Email"></i>
+                            <span class="item-name">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/chat.html">
+                            <i class="nav-icon i-Speach-Bubble-3"></i>
+                            <span class="item-name">Chat</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="extrakits" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/image.cropper.html">
+                            <i class="nav-icon i-Crop-2"></i>
+                            <span class="item-name">Image Cropper</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/loaders.html">
+                            <i class="nav-icon i-Loading-3"></i>
+                            <span class="item-name">Loaders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/ladda.button.html">
+                            <i class="nav-icon i-Loading-2"></i>
+                            <span class="item-name">Ladda Buttons</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/toastr.html">
+                            <i class="nav-icon i-Bell"></i>
+                            <span class="item-name">Toastr</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/sweet.alerts.html">
+                            <i class="nav-icon i-Approved-Window"></i>
+                            <span class="item-name">Sweet Alerts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/tour.html">
+                            <i class="nav-icon i-Plane"></i>
+                            <span class="item-name">User Tour</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/upload.html">
+                            <i class="nav-icon i-Data-Upload"></i>
+                            <span class="item-name">Upload</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="uikits" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/alerts.html">
+                            <i class="nav-icon i-Bell1"></i>
+                            <span class="item-name">Alerts</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="childNav" data-parent="sessions" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/signin.html">
+                            <i class="nav-icon i-Checked-User"></i>
+                            <span class="item-name">Sign in</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/signup.html">
+                            <i class="nav-icon i-Add-User"></i>
+                            <span class="item-name">Sign up</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/forgot.html">
+                            <i class="nav-icon i-Find-User"></i>
+                            <span class="item-name">Forgot</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="others" style="display: none;">
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/not.found.html">
+                            <i class="nav-icon i-Error-404-Window"></i>
+                            <span class="item-name">Not Found</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/user.profile.html">
+                            <i class="nav-icon i-Male"></i>
+                            <span class="item-name">User Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://prakerin.petrokimia-gresik.com/Students/blank.html" class="open">
+                            <i class="nav-icon i-File-Horizontal"></i>
+                            <span class="item-name">Blank Page</span>
+                        </a>
+                    </li>
+                </ul>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+            <div class="sidebar-overlay"></div>
+        </div>
+        <!-- =============== Left side End ================-->
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
+            <!-- ============ Body content start ============= -->
+            <div class="main-content">   
+                <div class="breadcrumb">
+                    <h1>Data Pengajuan Kerja Praktek</h1>
+                    <ul>
+                        <li>EPrakerin</li>
+                    </ul>
+                </div>
+                <div class="separator-breadcrumb border-top"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-title mb-3"> Lengkapi data anda dibawah ini untuk mengajukan Kerja Praktek</div>
+            
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">Mulai Prakerin</label>
+                                        
+                                        <input name="ctl00$MainContent$txtperiode" value="09/2020" id="MainContent_txtperiode" class="form-control form-control-rounded picker__input" type="text" required="required" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="MainContent_txtperiode_root"><div class="picker" id="MainContent_txtperiode_root" aria-hidden="true"><div class="picker__holder" tabindex="-1"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__header"><div class="picker__month">September</div><div class="picker__year">2020</div><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="MainContent_txtperiode_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="MainContent_txtperiode_table" title="Next month"> </div></div><table class="picker__table" id="MainContent_txtperiode_table" role="grid" aria-controls="MainContent_txtperiode" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">Sun</th><th class="picker__weekday" scope="col" title="Monday">Mon</th><th class="picker__weekday" scope="col" title="Tuesday">Tue</th><th class="picker__weekday" scope="col" title="Wednesday">Wed</th><th class="picker__weekday" scope="col" title="Thursday">Thu</th><th class="picker__weekday" scope="col" title="Friday">Fri</th><th class="picker__weekday" scope="col" title="Saturday">Sat</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1598720400000" role="gridcell" aria-label="08/2020">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1598806800000" role="gridcell" aria-label="08/2020">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1598893200000" role="gridcell" aria-label="09/2020">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1598979600000" role="gridcell" aria-label="09/2020">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599066000000" role="gridcell" aria-label="09/2020">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599152400000" role="gridcell" aria-label="09/2020">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599238800000" role="gridcell" aria-label="09/2020">5</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599325200000" role="gridcell" aria-label="09/2020">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599411600000" role="gridcell" aria-label="09/2020">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599498000000" role="gridcell" aria-label="09/2020">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599584400000" role="gridcell" aria-label="09/2020">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599670800000" role="gridcell" aria-label="09/2020">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599757200000" role="gridcell" aria-label="09/2020">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599843600000" role="gridcell" aria-label="09/2020">12</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599930000000" role="gridcell" aria-label="09/2020">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600016400000" role="gridcell" aria-label="09/2020">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600102800000" role="gridcell" aria-label="09/2020">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600189200000" role="gridcell" aria-label="09/2020">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600275600000" role="gridcell" aria-label="09/2020">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600362000000" role="gridcell" aria-label="09/2020">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600448400000" role="gridcell" aria-label="09/2020">19</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600534800000" role="gridcell" aria-label="09/2020">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600621200000" role="gridcell" aria-label="09/2020">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600707600000" role="gridcell" aria-label="09/2020">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--selected picker__day--highlighted" data-pick="1600794000000" role="gridcell" aria-label="09/2020" aria-selected="true" aria-activedescendant="true">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600880400000" role="gridcell" aria-label="09/2020">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600966800000" role="gridcell" aria-label="09/2020">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601053200000" role="gridcell" aria-label="09/2020">26</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601139600000" role="gridcell" aria-label="09/2020">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601226000000" role="gridcell" aria-label="09/2020">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601312400000" role="gridcell" aria-label="09/2020">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601398800000" role="gridcell" aria-label="09/2020">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601485200000" role="gridcell" aria-label="10/2020">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601571600000" role="gridcell" aria-label="10/2020">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601658000000" role="gridcell" aria-label="10/2020">3</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601744400000" role="gridcell" aria-label="10/2020">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601830800000" role="gridcell" aria-label="10/2020">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601917200000" role="gridcell" aria-label="10/2020">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602003600000" role="gridcell" aria-label="10/2020">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602090000000" role="gridcell" aria-label="10/2020">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602176400000" role="gridcell" aria-label="10/2020">9</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602262800000" role="gridcell" aria-label="10/2020">10</div></td></tr></tbody></table><div class="picker__footer"><button class="picker__button--today" type="button" data-pick="1600794000000" disabled="" aria-controls="MainContent_txtperiode">Today</button><button class="picker__button--clear" type="button" data-clear="1" disabled="" aria-controls="MainContent_txtperiode">Clear</button><button class="picker__button--close" type="button" data-close="true" disabled="" aria-controls="MainContent_txtperiode">Close</button></div></div></div></div></div></div>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">Selesai Prakerin</label>
+                                        
+                                        <input name="ctl00$MainContent$txtperiodeselesai" value="01/2021" id="MainContent_txtperiodeselesai" class="form-control form-control-rounded picker__input" type="text" required="required" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="MainContent_txtperiodeselesai_root"><div class="picker" id="MainContent_txtperiodeselesai_root" aria-hidden="true"><div class="picker__holder" tabindex="-1"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__header"><div class="picker__month">September</div><div class="picker__year">2020</div><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="MainContent_txtperiodeselesai_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="MainContent_txtperiodeselesai_table" title="Next month"> </div></div><table class="picker__table" id="MainContent_txtperiodeselesai_table" role="grid" aria-controls="MainContent_txtperiodeselesai" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">Sun</th><th class="picker__weekday" scope="col" title="Monday">Mon</th><th class="picker__weekday" scope="col" title="Tuesday">Tue</th><th class="picker__weekday" scope="col" title="Wednesday">Wed</th><th class="picker__weekday" scope="col" title="Thursday">Thu</th><th class="picker__weekday" scope="col" title="Friday">Fri</th><th class="picker__weekday" scope="col" title="Saturday">Sat</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1598720400000" role="gridcell" aria-label="08/2020">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1598806800000" role="gridcell" aria-label="08/2020">31</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1598893200000" role="gridcell" aria-label="09/2020">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1598979600000" role="gridcell" aria-label="09/2020">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599066000000" role="gridcell" aria-label="09/2020">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599152400000" role="gridcell" aria-label="09/2020">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599238800000" role="gridcell" aria-label="09/2020">5</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599325200000" role="gridcell" aria-label="09/2020">6</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599411600000" role="gridcell" aria-label="09/2020">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599498000000" role="gridcell" aria-label="09/2020">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599584400000" role="gridcell" aria-label="09/2020">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599670800000" role="gridcell" aria-label="09/2020">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599757200000" role="gridcell" aria-label="09/2020">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599843600000" role="gridcell" aria-label="09/2020">12</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1599930000000" role="gridcell" aria-label="09/2020">13</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600016400000" role="gridcell" aria-label="09/2020">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600102800000" role="gridcell" aria-label="09/2020">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600189200000" role="gridcell" aria-label="09/2020">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600275600000" role="gridcell" aria-label="09/2020">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600362000000" role="gridcell" aria-label="09/2020">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600448400000" role="gridcell" aria-label="09/2020">19</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600534800000" role="gridcell" aria-label="09/2020">20</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600621200000" role="gridcell" aria-label="09/2020">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600707600000" role="gridcell" aria-label="09/2020">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus picker__day--today picker__day--selected picker__day--highlighted" data-pick="1600794000000" role="gridcell" aria-label="09/2020" aria-activedescendant="true">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600880400000" role="gridcell" aria-label="09/2020">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1600966800000" role="gridcell" aria-label="09/2020">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601053200000" role="gridcell" aria-label="09/2020">26</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601139600000" role="gridcell" aria-label="09/2020">27</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601226000000" role="gridcell" aria-label="09/2020">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601312400000" role="gridcell" aria-label="09/2020">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="1601398800000" role="gridcell" aria-label="09/2020">30</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601485200000" role="gridcell" aria-label="10/2020">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601571600000" role="gridcell" aria-label="10/2020">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601658000000" role="gridcell" aria-label="10/2020">3</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601744400000" role="gridcell" aria-label="10/2020">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601830800000" role="gridcell" aria-label="10/2020">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1601917200000" role="gridcell" aria-label="10/2020">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602003600000" role="gridcell" aria-label="10/2020">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602090000000" role="gridcell" aria-label="10/2020">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602176400000" role="gridcell" aria-label="10/2020">9</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="1602262800000" role="gridcell" aria-label="10/2020">10</div></td></tr></tbody></table><div class="picker__footer"><button class="picker__button--today" type="button" data-pick="1600794000000" disabled="" aria-controls="MainContent_txtperiodeselesai">Today</button><button class="picker__button--clear" type="button" data-clear="1" disabled="" aria-controls="MainContent_txtperiodeselesai">Clear</button><button class="picker__button--close" type="button" data-close="true" disabled="" aria-controls="MainContent_txtperiodeselesai">Close</button></div></div></div></div></div></div>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="firstName2">Pejabat Pengirim Surat Pengantar</label>
+                                        
+                                        <input name="ctl00$MainContent$txtpejabatpengirim" value="Kepala Departemen Teknik Informatika, Dr.Eng. Chastine Fatichah, S.Kom.,M.Kom" id="MainContent_txtpejabatpengirim" class="form-control form-control-rounded" type="text" required="required">
+                                        <small id="MainContent_help_pejabat" class="form-text text-muted">Isi Nama Jabatan Pejabat Pengirim Surat Pengantar. ( misal : Kepala Departemen / Kepala Prodi )</small>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">No Surat Pengantar </label>
+                                        
+                                        <input name="ctl00$MainContent$txtnosuratpengantar" value="T/42944/IT2.IX.5.1.4/TU.00.08/2020" id="MainContent_txtnosuratpengantar" class="form-control form-control-rounded" type="text" required="required">
+                                        <small id="MainContent_help_nosurat" class="form-text text-muted">Isi nomor surat pengantar dari institusi anda.</small>
+                                    </div>
+                                    <div id="MainContent_divfakultas" class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Tanggal Surat Pengantar  </label>
+                                        
+                                        <input name="ctl00$MainContent$txttanggalsuratpengantar" value="07/16/2020" id="MainContent_txttanggalsuratpengantar" class="form-control form-control-rounded picker__input" type="text" required="required" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="MainContent_txttanggalsuratpengantar_root"><div class="picker" id="MainContent_txttanggalsuratpengantar_root" aria-hidden="true"><div class="picker__holder" tabindex="-1"><div class="picker__frame"><div class="picker__wrap"><div class="picker__box"><div class="picker__header"><div class="picker__month">December</div><div class="picker__year">1919</div><div class="picker__nav--prev" data-nav="-1" role="button" aria-controls="MainContent_txttanggalsuratpengantar_table" title="Previous month"> </div><div class="picker__nav--next" data-nav="1" role="button" aria-controls="MainContent_txttanggalsuratpengantar_table" title="Next month"> </div></div><table class="picker__table" id="MainContent_txttanggalsuratpengantar_table" role="grid" aria-controls="MainContent_txttanggalsuratpengantar" aria-readonly="true"><thead><tr><th class="picker__weekday" scope="col" title="Sunday">Sun</th><th class="picker__weekday" scope="col" title="Monday">Mon</th><th class="picker__weekday" scope="col" title="Tuesday">Tue</th><th class="picker__weekday" scope="col" title="Wednesday">Wed</th><th class="picker__weekday" scope="col" title="Thursday">Thu</th><th class="picker__weekday" scope="col" title="Friday">Fri</th><th class="picker__weekday" scope="col" title="Saturday">Sat</th></tr></thead><tbody><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1580712124000" role="gridcell" aria-label="30 November, 1919">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580625724000" role="gridcell" aria-label="1 December, 1919">1</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580539324000" role="gridcell" aria-label="2 December, 1919">2</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580452924000" role="gridcell" aria-label="3 December, 1919">3</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580366524000" role="gridcell" aria-label="4 December, 1919">4</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580280124000" role="gridcell" aria-label="5 December, 1919">5</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580193724000" role="gridcell" aria-label="6 December, 1919">6</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus picker__day--selected picker__day--highlighted" data-pick="-1580107324000" role="gridcell" aria-label="7 December, 1919" aria-activedescendant="true">7</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1580020924000" role="gridcell" aria-label="8 December, 1919">8</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579934524000" role="gridcell" aria-label="9 December, 1919">9</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579848124000" role="gridcell" aria-label="10 December, 1919">10</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579761724000" role="gridcell" aria-label="11 December, 1919">11</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579675324000" role="gridcell" aria-label="12 December, 1919">12</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579588924000" role="gridcell" aria-label="13 December, 1919">13</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579502524000" role="gridcell" aria-label="14 December, 1919">14</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579416124000" role="gridcell" aria-label="15 December, 1919">15</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579329724000" role="gridcell" aria-label="16 December, 1919">16</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579243324000" role="gridcell" aria-label="17 December, 1919">17</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579156924000" role="gridcell" aria-label="18 December, 1919">18</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1579070524000" role="gridcell" aria-label="19 December, 1919">19</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578984124000" role="gridcell" aria-label="20 December, 1919">20</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578897724000" role="gridcell" aria-label="21 December, 1919">21</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578811324000" role="gridcell" aria-label="22 December, 1919">22</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578724924000" role="gridcell" aria-label="23 December, 1919">23</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578638524000" role="gridcell" aria-label="24 December, 1919">24</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578552124000" role="gridcell" aria-label="25 December, 1919">25</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578465724000" role="gridcell" aria-label="26 December, 1919">26</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578379324000" role="gridcell" aria-label="27 December, 1919">27</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578292924000" role="gridcell" aria-label="28 December, 1919">28</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578206524000" role="gridcell" aria-label="29 December, 1919">29</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578120124000" role="gridcell" aria-label="30 December, 1919">30</div></td><td role="presentation"><div class="picker__day picker__day--infocus" data-pick="-1578033724000" role="gridcell" aria-label="31 December, 1919">31</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577947324000" role="gridcell" aria-label="1 January, 1920">1</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577860924000" role="gridcell" aria-label="2 January, 1920">2</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577774524000" role="gridcell" aria-label="3 January, 1920">3</div></td></tr><tr><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577688124000" role="gridcell" aria-label="4 January, 1920">4</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577601724000" role="gridcell" aria-label="5 January, 1920">5</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577515324000" role="gridcell" aria-label="6 January, 1920">6</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577428924000" role="gridcell" aria-label="7 January, 1920">7</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577342524000" role="gridcell" aria-label="8 January, 1920">8</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577256124000" role="gridcell" aria-label="9 January, 1920">9</div></td><td role="presentation"><div class="picker__day picker__day--outfocus" data-pick="-1577169724000" role="gridcell" aria-label="10 January, 1920">10</div></td></tr></tbody></table><div class="picker__footer"><button class="picker__button--today" type="button" data-pick="1600794000000" disabled="" aria-controls="MainContent_txttanggalsuratpengantar">Today</button><button class="picker__button--clear" type="button" data-clear="1" disabled="" aria-controls="MainContent_txttanggalsuratpengantar">Clear</button><button class="picker__button--close" type="button" data-close="true" disabled="" aria-controls="MainContent_txttanggalsuratpengantar">Close</button></div></div></div></div></div></div>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Perihal Surat Pengantar </label>
+                                        
+                                        <input name="ctl00$MainContent$txtperihal" value="Mengikuti Program Magang Mahasiswa Bersertifikat (PMMB) batch 2 tahun 2020." id="MainContent_txtperihal" class="form-control form-control-rounded" type="text" required="required">
+                                        
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">File Surat Pengantar </label>
+                                        
+                                        <a id="MainContent_hl_file_surat" class="form-control form-control-rounded" href="/StudentFile/b5f154a6-abf8-4ae0-ac8a-754943859ae7/Surat_Pengantar.pdf" target="_blank">Lihat File Surat Pengantar</a><br>
+                                        <input type="file" name="ctl00$MainContent$file_surat_pengantar" id="MainContent_file_surat_pengantar">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Ringkasan Proposal</label>
+                                        
+                                        <input name="ctl00$MainContent$txtringkasanproposal" value="Mengikuti Program Magang Mahasiswa Bersertifikat (PMMB) batch 2 tahun 2020." id="MainContent_txtringkasanproposal" class="form-control form-control-rounded" type="text" required="required">
+                                        <small id="MainContent_help_ringkasan" class="form-text text-muted">Isi ringkasan proposal anda .</small>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">File Proposal </label>
+                                        <a id="MainContent_hl_proposal" class="form-control form-control-rounded" href="/StudentFile/b5f154a6-abf8-4ae0-ac8a-754943859ae7/Proposal.pdf" target="_blank">Lihat File Proposal</a>
+                                        <br>
+                                        <input type="file" name="ctl00$MainContent$file_proposal" id="MainContent_file_proposal">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="example-text-input">Fokus Kegiatan  </label>
+                                         
+                                        <input name="ctl00$MainContent$txtfokuskegiatan" value="Program Magang Mahasiswa Bersertifikat (PMMB)" id="MainContent_txtfokuskegiatan" class="form-control form-control-rounded" required="required" type="text">
+                                        <small id="MainContent_help_kegiatan" class="form-text text-muted">Isi kegiatan yang akan anda lakukan di Petrokimia Gresik.</small>
+                                    </div>
+                                    <div class="col-md-6 mb-3"></div>
+                                    <div class="col-12 mb-3" style="margin-top: 10px;">
+                                        <h3>Rencana Unit Kerja</h3>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <p>Bagian ini merupakan bagian yang ingin anda pilih selama Prakerin, mohon di pertimbangkan secara matang-matang. <br>Berdasarkan jurusan yang telah anda masukkan sebelumnya, berikut merupakan daftar unit kerja yang sesuai dengan jurusan Anda:</p>
+                                        <p style="color:red">Pengembangan Sumber Daya Manusia, Teknologi dan Informasi PIPG, Prasarana dan Logistik</p>
+                                        <button class="btn btn-info" type="button" data-toggle="modal" data-target="#exampleModal">
+                                            Lihat Selengkapnya...
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6  form-group mb-3">
+                                        <label for="example-text-input">Pilihan Jurusan 1</label>
+                                        <select class="form-control form-control-rounded select-uk" id="uk1" name="state">
+                                            <option value="default" disabled selected>Pilih Unit Kerja</option>
+                                            <option value="bsdm">Pengembangan Sumber Daya Manusia</option>
+                                            <option value="tipipg">Teknologi dan Informasi PIPG</option>
+                                            <option value="pslg">Prasarana dan Logistik</option>
+                                            <option value="k3">K3</option>
+                                            <option value="psdm">Perencanaan Sumber Daya Manusia</option>
+                                            <option value="akt">Akutansi</option>
+                                        </select>
+                                        <small id="notify1" class="form-text text-danger date" style="display:none;">Kuota Unit Kerja ini telah penuh selama periode yang anda pilih</small>
+                                        <small id="notify1" class="form-text text-danger note" style="display:none;">Tidak boleh memilih jurusan yang sama</small>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-6  form-group">
+                                        <label for="example-text-input">Pilihan Jurusan 2</label>
+                                        <select class="form-control form-control-rounded select-uk" id="uk2" name="state">
+                                            <option value="default" disabled selected>Pilih Unit Kerja</option>
+                                            <option value="bsdm">Pengembangan Sumber Daya Manusia</option>
+                                            <option value="tipipg">Teknologi dan Informasi PIPG</option>
+                                            <option value="pslg">Prasarana dan Logistik</option>
+                                            <option value="k3">K3</option>
+                                            <option value="psdm">Perencanaan Sumber Daya Manusia</option>
+                                            <option value="akt">Akutansi</option>
+                                        </select>
+                                        <small id="notify2" class="form-text text-danger date" style="display:none;">Kuota Unit Kerja ini telah penuh selama periode yang anda pilih</small>
+                                        <small id="notify2" class="form-text text-danger note" style="display:none;">Tidak boleh memilih jurusan yang sama</small>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    <div class="col-md-6  form-group">
+                                        <label for="example-text-input">Pilihan Jurusan 3</label>
+                                        <select class="form-control form-control-rounded select-uk" id="uk3" name="state">
+                                            <option value="default" disabled selected>Pilih Unit Kerja</option>
+                                            <option value="bsdm">Pengembangan Sumber Daya Manusia</option>
+                                            <option value="tipipg">Teknologi dan Informasi PIPG</option>
+                                            <option value="pslg">Prasarana dan Logistik</option>
+                                            <option value="k3">K3</option>
+                                            <option value="psdm">Perencanaan Sumber Daya Manusia</option>
+                                            <option value="akt">Akutansi</option>
+                                        </select>
+                                        <small id="notify3" class="form-text text-danger date" style="display:none;">Kuota Unit Kerja ini telah penuh selama periode yang anda pilih</small>
+                                        <small id="notify3" class="form-text text-danger note" style="display:none;">Tidak boleh memilih jurusan yang sama</small>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                    
+                                    <div class="col-md-6 form-group">
+                                        <label for="example-text-input">Status Kelengkapan </label>
+                                        <span id="MainContent_lblkelengkapan" class="form-control-rounded badge badge-pill badge-success p-2 m-1">Lengkap</span>
+                                        <a id="MainContent_hlResume" class="btn btn-primary btn-sm" href="Resume.aspx">Lanjutkan ke Resume Pengajuan</a>
+                                    </div>
+                                    
+                                    <div class="col-md-12 form-group mb-3">
+                                        <input type="submit" name="ctl00$MainContent$BtnSave" value="Simpan" id="MainContent_BtnSave" class="btn btn-success">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Daftar Jurusan Yang Sesuai</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>Pengembangan Sumber Daya Manusia</li>
+                                    <li>Teknologi dan Informasi PIPG</li>
+                                    <li>Prasarana dan Logistik</li>
+                                    <li>K3</li>
+                                    <li>Perencanaan Sumber Daya Manusia</li>
+                                    <li>Akutansi</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content goes here -->
+            </div>
+        </div>
+    </div>
+    <script src="assets/dist-assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/dist-assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/dist-assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/dist-assets/js/scripts/script.min.js"></script>
+    <script src="assets/dist-assets/js/scripts/sidebar.large.script.min.js"></script>
+    <script src="Prakerin%20Petrokimia%20Gresik_files/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="Prakerin%20Petrokimia%20Gresik_files/picker_002.js"></script>
+    <script src="Prakerin%20Petrokimia%20Gresik_files/picker.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#MainContent_txtperiode,#MainContent_txtperiodeselesai').pickadate({
+                format: 'mm/yyyy'
+            });
+            $('#MainContent_txttanggalsuratpengantar').pickadate();
+            $('#uk1, #uk2, #uk3').select2();
+            var check = { 
+                "default" : true,
+                "bsdm" : false,
+                "tipipg" : true,
+                "pslg" : true,
+                "k3" : false,
+                "psdm" : true,
+                "akt" : true,
+            };
+            function re_init(selectd,pos){
+                $('.select-uk').each(function(ob){
+                    console.log($(ob));//.show();
+                    var val = $('.select-uk')[ob].value;
+                    var txt = $('.select-uk option:selected')[ob].text;
+                    if(val!="default"){
+                        $('.select-uk').not(this).find('option[value="'+val+'"]').hide();
+                        $('.select2-results__option li').each(function(bj){
+                            var text = $('.select2-results__option li')[bj].text;
+                        });
+                    }
+                    console.log(val);
+                    console.log(selectd);
+                });
+            }
+            $('.select-uk').on('change', function(e){
+                $('.select-uk').find('option').show();
+                var selectd = $('option:selected',this).val();
+                re_init(selectd,this);
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
